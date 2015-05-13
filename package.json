@@ -8,15 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChelseaBurns/ghpages-workflow.git"
+    "url": "git+https://github.com/NSS-Cohort-9/ghpages-workflow.git"
   },
-  "author": "Chelsea Burns <co.designux@gmail.com>",
+  "author": "Scott Humphries <scott@sscotth.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ChelseaBurns/ghpages-workflow/issues"
+    "url": "https://github.com/NSS-Cohort-9/ghpages-workflow/issues"
   },
-  "homepage": "https://github.com/ChelseaBurns/ghpages-workflow#readme",
+  "homepage": "https://github.com/NSS-Cohort-9/ghpages-workflow#readme",
   "devDependencies": {
+    "babel": "^5.3.1",
+    "bowcat": "0.0.4",
     "jade": "^1.9.2",
     "node-sass": "^3.1.0"
   }

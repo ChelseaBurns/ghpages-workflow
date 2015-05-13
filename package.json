@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
+ "scripts": {
+   "test": "echo \"Error: no test specified\" && exit 1",
+   "server": "./node_modules/.bin/hs -a localhost -o $((RANDOM + 10000)) -o",
+   "build": "./build.sh",
+   "start": "npm run build;  npm run server"
+ },  "repository": {
     "type": "git",
     "url": "git+https://github.com/ChelseaBurns/ghpages-workflow.git"
   },
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/ChelseaBurns/ghpages-workflow#readme",
   "devDependencies": {
+    "bowcat": "0.0.4",
     "jade": "^1.9.2",
     "node-sass": "^3.1.0"
   }

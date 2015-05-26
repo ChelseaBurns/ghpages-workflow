@@ -1,18 +1,15 @@
 #!/bin/sh
 
+npm install
+bower install
+
 # clean and prepare public directory
 rm -rf public
 cp -r src public
 
 # compile jade to html
-./node_modules/.bin/jade src -P
-cd src
-find . -name "*.html" | cpio -pdvm ../public
-cd ..
-rm -rf src/*.html \
-       src/**/*.html \
-       public/**/_*.html \
-       public/_partials
+./node_modules/.bin/jade src -o public -PH
+rm -rf public/_partials
 
 # compile sass to css
 ./node_modules/.bin/node-sass \
@@ -25,7 +22,7 @@ rm -rf src/*.html \
 
 # concat bower_components to public/lib directory
 if [ -d "bower_components" ]; then
-  ./node_modules/.bin/bowcat . -o public/lib -m
+  ./node_modules/.bin/bowcat -o public/lib
 fi
 
 # clean unneeded files
